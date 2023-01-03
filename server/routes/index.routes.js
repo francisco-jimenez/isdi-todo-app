@@ -1,7 +1,20 @@
-const router = require("express").Router();
+const express = require("express");
+const router = express.Router();
 
-router.get("/", (req, res, next) => {
-  res.json("All good in here");
-});
+const {
+  getTodos,
+  addTodo,
+  updateTodo,
+  deleteTodo,
+} = require("../controllers/todo");
+
+console.log(getTodos);
+router.get("/todo", getTodos);
+
+router.post("/todo", addTodo);
+
+router.put("/todo/:id", updateTodo);
+
+router.delete("/todo/:id", deleteTodo);
 
 module.exports = router;
