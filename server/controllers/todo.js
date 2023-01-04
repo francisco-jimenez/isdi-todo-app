@@ -12,8 +12,10 @@ const getTodos = async (req, res) => {
 const addTodo = async (req, res) => {
   try {
     const body = req.body;
-
-    console.log(req.body);
+    if (!body.name || !body.description) {
+      res.status(400).json({ message: "Name and description are required" });
+      return;
+    }
     const todo = new Todo({
       name: body.name,
       description: body.description,

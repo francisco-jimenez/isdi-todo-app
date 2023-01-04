@@ -8,7 +8,6 @@ const {
   deleteTodo,
 } = require("../controllers/todo");
 
-console.log(getTodos);
 router.get("/todo", getTodos);
 
 router.post("/todo", addTodo);
