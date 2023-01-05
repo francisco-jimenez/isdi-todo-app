@@ -11,7 +11,12 @@ const AddTodo = ({ saveTodo }) => {
   };
 
   return (
-    <form className="Form" onSubmit={(e) => saveTodo(e, formData)}>
+    <form
+      className="Form"
+      onSubmit={(e) => {
+        saveTodo(e, formData);
+      }}
+    >
       <div>
         <div>
           <label htmlFor="name">Nombre</label>
@@ -22,7 +27,9 @@ const AddTodo = ({ saveTodo }) => {
           <input onChange={handleForm} type="text" id="description" />
         </div>
       </div>
-      <button disabled={formData === undefined ? true : false}>Añadir</button>
+      {formData && formData.name && formData.description && (
+        <button>Añadir</button>
+      )}
     </form>
   );
 };

@@ -65,7 +65,7 @@ body {
 .Form {
   display: flex;
   justify-content: space-between;
-  align-items: end;
+  align-items: flex-end;
   padding: 1rem;
   background: rgb(255, 252, 252);
   margin-bottom: 1rem;
