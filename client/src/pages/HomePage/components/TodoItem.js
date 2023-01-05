@@ -4,7 +4,7 @@ const Todo = ({ todo, updateTodo, deleteTodo }) => {
   const checkTodo = todo.status ? `line-through` : "";
 
   return (
-    <div className="Card">
+    <div data-testid="single-todo" className="Card">
       <div className="Card--text">
         <h1 className={checkTodo}>{todo.name}</h1>
         <span className={checkTodo}>{todo.description}</span>

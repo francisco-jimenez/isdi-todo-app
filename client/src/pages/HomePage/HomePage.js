@@ -55,7 +55,7 @@ const HomePage = () => {
 
   return (
     <div className="App">
-      <h1>Mis todos</h1>
+      <h1 data-testid="main-header">Mis todos</h1>
       <AddTodo saveTodo={handleSaveTodo} />
       {Boolean(uncompletedTasks.length) && <h2>Tareas por hacer</h2>}
       {uncompletedTasks.map((todo) => (
