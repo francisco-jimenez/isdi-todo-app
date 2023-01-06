@@ -16,7 +16,7 @@ And also .env in the root of client folder
 REACT_APP_SERVER_URL=http://localhost:5005
 ```
 
-###You also would need a mongodb service working in your local machine.
+### You also would need a mongodb service working in your local machine.
 
 To start the project:
 
