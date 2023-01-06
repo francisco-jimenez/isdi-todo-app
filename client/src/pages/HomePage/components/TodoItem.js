@@ -10,15 +10,19 @@ const Todo = ({ todo, updateTodo, deleteTodo }) => {
         <span className={checkTodo}>{todo.description}</span>
       </div>
       <div className="Card--button">
-        <button
-          onClick={() => updateTodo(todo)}
-          className={todo.status ? `hide-button` : "Card--button__done"}
-        >
-          Completar
-        </button>
+        {todo.status === false && (
+          <button
+            onClick={() => updateTodo(todo)}
+            data-testid="complete-button"
+            className="Card--button__done"
+          >
+            Completar
+          </button>
+        )}
         <button
           onClick={() => deleteTodo(todo._id)}
           className="Card--button__delete"
+          data-testid="delete-button"
         >
           Borrar
         </button>

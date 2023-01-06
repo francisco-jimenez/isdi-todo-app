@@ -20,11 +20,21 @@ const AddTodo = ({ saveTodo }) => {
       <div>
         <div>
           <label htmlFor="name">Nombre</label>
-          <input onChange={handleForm} type="text" id="name" />
+          <input
+            data-testid="name"
+            onChange={handleForm}
+            type="text"
+            id="name"
+          />
         </div>
         <div>
           <label htmlFor="description">Descripcion</label>
-          <input onChange={handleForm} type="text" id="description" />
+          <input
+            data-testid="description"
+            onChange={handleForm}
+            type="text"
+            id="description"
+          />
         </div>
       </div>
       {formData && formData.name && formData.description && (
